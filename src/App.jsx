@@ -1,21 +1,21 @@
 import { Link, Route, Routes } from 'react-router-dom'
 import './App.css'
 import Home from './Home'
-import Login from './Login'
 import SignUp from './SignUp'
+import Checkout from './Checkout';
 
 function App() {
   
   return (
     <>
-      <nav>
+      <nav className='navigation'>
         <Link to="/">Home</Link>
-        <Link to="/login">Login</Link>
+        <Link to="/checkout">Cart</Link>
         <Link to="/signup">Signup</Link>
       </nav>
       <Routes>
         <Route path="/" element={<Home />}/>
-        <Route path="/login" element={<Login />} />
+        <Route path="/checkout" element={<Checkout />} />
         <Route path="/signup" element={<SignUp />}/>
       </Routes>
     </>
